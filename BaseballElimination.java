@@ -25,7 +25,7 @@ public class BaseballElimination {
         }
 
         public String toString(){
-            return "idk name but yeah oops " + wins + losses + remaining + number;
+            return "wins: " + wins + ",losses: " losses + ", remaining: " + remaining + ", number: " + number;
         }
     }
 
@@ -68,23 +68,23 @@ public class BaseballElimination {
     }
 
     public int wins(String team) {
-        if (!teams.containsKey(team)){throw new IllegalArgumentException("aw hell no that's fake");}
+        if (!teams.containsKey(team)){throw new IllegalArgumentException("invalid team name");}
         return teams.get(team).wins;
     }
 
     public int losses(String team) {
-        if (!teams.containsKey(team)){throw new IllegalArgumentException("aw hell no that's fake");}
+        if (!teams.containsKey(team)){throw new IllegalArgumentException("invalid team name");}
         return teams.get(team).losses;
     }
 
     public int remaining(String team) {
-        if (!teams.containsKey(team)){throw new IllegalArgumentException("aw hell no that's fake");}
+        if (!teams.containsKey(team)){throw new IllegalArgumentException("invalid team name");}
         return teams.get(team).remaining;
     }
 
     public int against(String team1, String team2) {
-        if (!teams.containsKey(team1)){throw new IllegalArgumentException("aw hell no that's fake");}
-        if (!teams.containsKey(team2)){throw new IllegalArgumentException("aw hell no that's fake");}
+        if (!teams.containsKey(team1)){throw new IllegalArgumentException("invalid team name");}
+        if (!teams.containsKey(team2)){throw new IllegalArgumentException("invalid team name");}
         return teams.get(team1).gamesLeft[teams.get(team2).number];
     }
 
