@@ -25,13 +25,12 @@ public class BaseballElimination {
         }
 
         public String toString(){
-            return "wins: " + wins + ",losses: " losses + ", remaining: " + remaining + ", number: " + number;
+            return "wins: " + wins + ",losses: " + losses + ", remaining: " + remaining + ", number: " + number;
         }
     }
 
     private int numTeams;
     private HashMap<String, Team> teams;
-    // the bottom ones are buns and i should fix them soo
     private FordFulkerson[] ffs;
     private String[] newTeamIndexes;
     private ArrayList<String> teamNames;
@@ -148,7 +147,7 @@ public class BaseballElimination {
      * this is for inputting the vertex reference and outputting the actual vertex
      * for the graph.
      */
-    // bro this lowk confusing but don't worry about it
+    // vertex number given the team
     private int toVertex(int a) {
         return (numTeams - 1) * (numTeams - 2) / 2 + a + 1;
     }
