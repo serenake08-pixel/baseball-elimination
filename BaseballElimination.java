@@ -89,7 +89,7 @@ public class BaseballElimination {
     }
 
     public boolean isEliminated(String team) {
-        if (!teams.containsKey(team)){throw new IllegalArgumentException("aw hell no that's fake");}
+        if (!teams.containsKey(team)){throw new IllegalArgumentException("invalid team name");}
         FlowNetwork network = new FlowNetwork(2 + (numTeams - 1) + (numTeams - 1) * (numTeams - 2) / 2);
         int s = 0;
         int t = network.V() - 1;
